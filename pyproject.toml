@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-to-musicxml-converter"
+version = "0.1.0"
+description = "Convert engraved PDF scores into MusicXML for MuseScore and other notation software."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["streamlit>=1.36"]
+
+[project.scripts]
+pdf2xml = "pdf_to_musicxml.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
